@@ -1,0 +1,3 @@
+include ':OrcTest_Net', ':app', ':oectest_local'
+include ':idcard_ui_library'
+include ':demo_project'

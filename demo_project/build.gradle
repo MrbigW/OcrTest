@@ -1,0 +1,25 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 19
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        applicationId "com.megvii.awesomedemo.idcard"
+        minSdkVersion 19
+        targetSdkVersion 21
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+dependencies {
+    compile project(':idcard_ui_library')
+    compile files('libs/android-async-http-1.4.6.jar')
+    compile files('libs/megvii-license-manager-0.2.0.jar')
+}
